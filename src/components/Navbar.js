@@ -8,7 +8,7 @@ const [authState, setAuthState] = useState(true);
 
 
 useEffect(() => {
-    faceio = new faceIO("fioa49e3");
+    faceio = new faceIO("fioa7090");
 }, []);
 
 const handleSignIn = async () => {
@@ -33,14 +33,14 @@ const handleSignIn = async () => {
         locale: "auto",
       });
       console.log(`${response.user}`)
-      setAuthState(true);
+      setAuthState(false);
     } catch (error) {
       console.log(error);
     }
   };
 
   const handleSignOut = async () => {
-    setAuthState(false)
+    setAuthState(true)
   }
   if(authState){
     return(
